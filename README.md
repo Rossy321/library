@@ -1,1 +1,1 @@
-# library
+Library project to demonstrate my JS skills with html and css. 
