@@ -8,7 +8,14 @@ this.title = title;
 this.author = author;
 this.pages = pages;
 this.read = read; 
+this.ID = crypto.randomUUID();
 }
 
+function addBookToLibrary (title, author, pages, read) {
+    
+    let novel = new Book(title, author, pages, read,);
+    myLibrary.push(novel)
 
+} 
+    
 
