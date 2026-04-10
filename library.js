@@ -17,5 +17,11 @@ function addBookToLibrary (title, author, pages, read) {
     myLibrary.push(novel)
 
 } 
+
+function arrayDisplayLoop() {
+    myLibrary.forEach(novel => {
+        alert(novel);
+    });
+
     
 
