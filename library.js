@@ -19,8 +19,15 @@ function addBookToLibrary (title, author, pages, read) {
 } 
 
 function arrayDisplayLoop() {
+    let bookShelf = document.querySelector(".book-shelf");
     myLibrary.forEach(novel => {
-        alert(novel);
+        let book = document.createElement("div");
+        bookShelf.appendChild(book);
+        let title = novel.title;
+        let titleNode = document.createTextNode(title);
+        let paraTitle = document.createElement("p");
+        paraTitle.appendChild(titleNode);
+        book.appendChild(paraTitle);
     });
 
     
