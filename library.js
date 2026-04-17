@@ -23,12 +23,18 @@ function arrayDisplayLoop() {
     myLibrary.forEach(novel => {
         let book = document.createElement("div");
         bookShelf.appendChild(book);
-        let title = novel.title;
-        let titleNode = document.createTextNode(title);
         let paraTitle = document.createElement("p");
-        paraTitle.appendChild(titleNode);
+        paraTitle.textContent = novel.title;
         book.appendChild(paraTitle);
-    });
-
-    
+        let paraAuthor = document.createElement("p");
+        paraAuthor.textContent = novel.author;
+        book.appendChild(paraAuthor);
+        let paraPages = document.createElement("p");
+        paraPages.textContent = novel.pages;
+        book.appendChild(paraPages);
+        let paraRead = document.createElement("p");
+        paraRead.textContent = novel.read;
+        book.appendChild(paraRead);
+        
+    }); 
 
