@@ -20,6 +20,7 @@ function addBookToLibrary (title, author, pages, read) {
 
 function arrayDisplayLoop() {
     let bookShelf = document.querySelector(".book-shelf");
+    bookShelf.textContent = "";
     myLibrary.forEach(novel => {
         let book = document.createElement("div");
         bookShelf.appendChild(book);
@@ -34,7 +35,14 @@ function arrayDisplayLoop() {
         book.appendChild(paraPages);
         let paraRead = document.createElement("p");
         paraRead.textContent = novel.read;
-        book.appendChild(paraRead);
-        
+        book.appendChild(paraRead);    
     }); 
+}
+
+    new Book ("trainspotting", "irvine welsh", 300, "yes");
+    new Book ("great expectations", "charles dickens", 265, "yes");
+    new Book ("cien años de soledad", "Gabriel García Márquez", 325, "yes");
+
+
+    arrayDisplayLoop();
 
