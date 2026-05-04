@@ -23,6 +23,7 @@ function arrayDisplayLoop() {
     bookShelf.textContent = "";
     myLibrary.forEach(novel => {
         let book = document.createElement("div");
+        book.classList.add("book");
         bookShelf.appendChild(book);
         let paraTitle = document.createElement("p");
         paraTitle.textContent = novel.title;

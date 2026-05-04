@@ -1,0 +1,9 @@
+.book-shelf {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.book {
+    background-color: rgb(248, 247, 243); 
+}
+
