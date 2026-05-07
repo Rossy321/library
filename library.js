@@ -48,6 +48,27 @@ function arrayDisplayLoop() {
     arrayDisplayLoop();
 
 
+    const form = document.querySelector(".form");
+
+    form.addEventListener("submit", handleSubmit);
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        const title = document.querySelector("#book-title").value;
+        const author = document.querySelector("#author").value;
+        const pages = document.querySelector("#pages").value;
+        const read = document.querySelector('input[name="read"]:checked').value;
+        addBookToLibrary(title, author, pages, read);
+        arrayDisplayLoop();
+        const dialog = document.querySelector("#book-dialog");
+        dialog.close();
+    }
+
+
+
+
+
+
 
 
 
