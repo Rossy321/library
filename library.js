@@ -9,6 +9,7 @@ this.author = author;
 this.pages = pages;
 this.read = read; 
 this.ID = crypto.randomUUID();
+document
 }
 
 function addBookToLibrary (title, author, pages, read) {
@@ -36,7 +37,8 @@ function arrayDisplayLoop() {
         book.appendChild(paraPages);
         let paraRead = document.createElement("p");
         paraRead.textContent = novel.read;
-        book.appendChild(paraRead);    
+        book.appendChild(paraRead);  
+        book.dataset.bookID = novel.ID;
     }); 
 }
 
@@ -63,6 +65,9 @@ function arrayDisplayLoop() {
         const dialog = document.querySelector("#book-dialog");
         dialog.close();
     }
+
+
+
 
 
 
