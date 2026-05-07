@@ -39,6 +39,8 @@ function arrayDisplayLoop() {
         paraRead.textContent = novel.read;
         book.appendChild(paraRead);  
         book.dataset.bookID = novel.ID;
+        let removeButton = document.createElement("button");
+        book.appendChild(removeButton);
     }); 
 }
 
