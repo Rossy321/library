@@ -8,3 +8,10 @@
     width: 200px;
 }
 
+.remove-button {
+    width: 100px;
+    height: 100px;
+    background-color: aliceblue;
+    color: black;
+}
+

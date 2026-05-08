@@ -40,6 +40,8 @@ function arrayDisplayLoop() {
         book.appendChild(paraRead);  
         book.dataset.bookID = novel.ID;
         let removeButton = document.createElement("button");
+        removeButton.classList.add("remove-button");
+        removeButton.textContent = "Remove Book";
         book.appendChild(removeButton);
     }); 
 }
