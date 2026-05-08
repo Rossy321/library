@@ -42,6 +42,7 @@ function arrayDisplayLoop() {
         let removeButton = document.createElement("button");
         removeButton.classList.add("remove-button");
         removeButton.textContent = "Remove Book";
+        removeButton.addEventListener("click", removeBook);
         book.appendChild(removeButton);
     }); 
 }
@@ -69,6 +70,18 @@ function arrayDisplayLoop() {
         const dialog = document.querySelector("#book-dialog");
         dialog.close();
     }
+
+
+
+    function removeBook(event) {
+        
+
+ 
+        
+}
+
+
+    
 
 
 
