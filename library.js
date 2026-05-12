@@ -9,7 +9,6 @@ this.author = author;
 this.pages = pages;
 this.read = read; 
 this.ID = crypto.randomUUID();
-document
 }
 
 function addBookToLibrary (title, author, pages, read) {
@@ -74,11 +73,23 @@ function arrayDisplayLoop() {
 
 
     function removeBook(event) {
+     
         
+        const idToRemove = event.target.parentElement.dataset.bookID;
 
- 
+        const index = myLibrary.findIndex(book => book.ID === idToRemove);
+
+       if (index !== -1) {
+        myLibrary.splice(index, 1);
+       }
+
+         arrayDisplayLoop();
+    }
+
+
+  
+
         
-}
 
 
     
