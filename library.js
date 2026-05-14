@@ -10,6 +10,9 @@ this.pages = pages;
 this.read = read; 
 this.ID = crypto.randomUUID();
 }
+Book.prototype.toggleReadStatus = function () {
+    this.read = !this.read;
+};
 
 function addBookToLibrary (title, author, pages, read) {
     
@@ -35,7 +38,11 @@ function arrayDisplayLoop() {
         paraPages.textContent = novel.pages;
         book.appendChild(paraPages);
         let paraRead = document.createElement("p");
-        paraRead.textContent = novel.read;
+         if (novel.read) {
+        paraRead.textContent = "yes";
+        } else {
+        paraRead.textContent = "no";
+        } 
         book.appendChild(paraRead);  
         book.dataset.bookID = novel.ID;
         let removeButton = document.createElement("button");
@@ -43,7 +50,15 @@ function arrayDisplayLoop() {
         removeButton.textContent = "Remove Book";
         removeButton.addEventListener("click", removeBook);
         book.appendChild(removeButton);
+        let readStatusButton = document.createElement("button");
+        readStatusButton.classList.add("read-status-button");
+        readStatusButton.textContent = "toggle read status";
+        readStatusButton.addEventListener("click", function () {
+            novel.toggleReadStatus();
+            arrayDisplayLoop();
     }); 
+    book.appendChild(readStatusButton);
+  });
 }
 
     addBookToLibrary ("trainspotting", "irvine welsh", 300, "yes");
@@ -83,8 +98,10 @@ function arrayDisplayLoop() {
         myLibrary.splice(index, 1);
        }
 
-         arrayDisplayLoop();
+       arrayDisplayLoop();
     }
+
+
 
 
   
