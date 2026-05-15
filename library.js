@@ -61,9 +61,9 @@ function arrayDisplayLoop() {
   });
 }
 
-    addBookToLibrary ("trainspotting", "irvine welsh", 300, "yes");
-    addBookToLibrary ("great expectations", "charles dickens", 265, "yes");
-    addBookToLibrary ("cien años de soledad", "Gabriel García Márquez", 325, "yes");
+    addBookToLibrary ("trainspotting", "irvine welsh", 300, true);
+    addBookToLibrary ("great expectations", "charles dickens", 265, true);
+    addBookToLibrary ("cien años de soledad", "Gabriel García Márquez", 325, true);
 
 
     arrayDisplayLoop();
