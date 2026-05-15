@@ -78,13 +78,12 @@ function arrayDisplayLoop() {
         const title = document.querySelector("#book-title").value;
         const author = document.querySelector("#author").value;
         const pages = document.querySelector("#pages").value;
-        const read = document.querySelector('input[name="read"]:checked').value;
+        const read = document.querySelector('input[name="read"]:checked').value === "yes";
         addBookToLibrary(title, author, pages, read);
         arrayDisplayLoop();
         const dialog = document.querySelector("#book-dialog");
         dialog.close();
     }
-
 
 
     function removeBook(event) {
